@@ -10,6 +10,10 @@ h1,h2,h3,h4,h5,h6,p {
     margin-block-end: 0;
 }
 
+input {
+    border: none;
+}
+
 body {
     margin: 0;
 
@@ -24,6 +28,22 @@ a,a:visited {
     text-decoration: none;
     color: black;
 }
+
+/* Scrollbar
+=======================*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+::-webkit-scrollbar-thumb {
+    background: #000; 
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); 
+  }
+
 
 /* Container 
 =======================*/
@@ -294,6 +314,13 @@ a,a:visited {
 
     margin-top: 40px;
     cursor: pointer;
+
+    filter: invert(0);
+}
+
+.slider__button:hover {
+    filter: invert(100%);
+    transition: filter 0.2s linear;
 }
 
 .slider__img > img {
@@ -351,6 +378,12 @@ a,a:visited {
     align-items: center;
     display: flex;
     flex-direction: column;
+
+    transform: translateY(0);
+}
+.item:hover {
+    transition: transform 0.2s linear;
+    transform: translateY(-5px);
 }
 
 .item__description {
@@ -439,4 +472,206 @@ a > img {
     transition: transform .5s linear;
     transform: translateY(-5px);
 
+}
+
+/* Adress
+=======================*/
+.adress__title {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.2rem;
+
+    margin-bottom: 75px;
+}
+
+.adress {
+    display: flex;  
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.adress__inner {
+    flex: 1 0;
+}
+
+.adress__map {
+    flex: 0 1 62%;
+}
+
+.adress__search {
+    height: 40px;
+    max-width: 430px;
+    width: 100%;
+
+    background-color: white;
+    background-image: url('../img/adress/search.png');
+    background-position: right;
+    background-repeat: no-repeat;
+
+    padding: 10px 30px 10px 10px;
+    margin-bottom: 15px;
+
+    border-bottom: 1px solid black;
+}
+.adress__search::placeholder {
+    font-family: Cormorant, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+.adress__search:focus {
+    outline: none;
+}
+
+.adress__item {
+    overflow-y: scroll;
+
+    max-height: 430px;
+}
+
+.adress__description {
+    max-width: 430px;
+
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #DDDDDD;
+}
+.adress__description:hover {
+    background-color: rgba(0, 0, 0, 0.021);
+}
+
+
+.adress__name {
+    font-size: 1.16rem;
+    font-family: "Playfair Display", sefir;
+    font-weight: 700;
+    line-height: 1.75;
+    letter-spacing: 0.2rem;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.adress__contact {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.16rem;
+}
+
+.adress__icon {
+    flex: 0;
+}
+
+.adress__phone {
+    flex: 1;
+
+    margin-left: 15px;
+    
+    font-family: Inter, sans-serif;
+    font-weight: 200;
+    line-height: 1.75;
+    letter-spacing: 0.2rem;
+}
+
+.adress__time {
+    flex: 1;
+
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    text-align: right;
+
+    padding-right: 25px;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Subscribe
+=======================*/
+.subscribe {
+    background-color: #C2DBDC;
+
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.subscribe__title {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    line-height: 1.3;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+
+    margin-top: 35px;
+}
+
+.subscribe__subtitle {
+    font-size: 2rem;
+    font-family: Cormorant,serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.25;
+
+    margin-bottom: 45px;
+}
+
+.subscribe__email {
+    height: 40px;
+    max-width: 430px;
+    width: 100%;
+
+    background-color: #C2DBDC;
+
+    padding: 10px;
+    margin-bottom: 40px;
+
+    border-bottom: 1px solid black;
+}
+.subscribe__email::placeholder {
+    font-family: Cormorant, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+
+    color: rgba(0, 0, 0, 0.5);
+
+}
+.subscribe__email:focus {
+    outline: none;
+}
+
+.subscribe__button {
+    max-width: 385px;
+    max-height: 65px;
+
+    border: 1px solid black;
+    padding: 18px 136px;
+
+    font-size: 1.5rem;
+    font-family: Inter, sans-serif;
+    line-height: 1.25;
+    font-weight: 200;
+
+    background-color: #C2DBDC;
+
+    filter: invert(0);
+
+    cursor: pointer;
+}
+.subscribe__button:hover {
+    filter: invert(100%);
+    transition:  0.2s linear;
 }
